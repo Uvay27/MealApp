@@ -12,7 +12,7 @@
         android:id="@+id/timeInput"
         android:layout_width="wrap_content"
         android:layout_height="63dp"
-        android:layout_marginTop="175dp"
+        android:layout_marginTop="17dp"
         android:background="@color/white"
         android:hint="Enter time of day (e.g., Morning, Mid-morning, Afternoon)"
         android:inputType="text"
@@ -21,13 +21,12 @@
         android:textSize="24sp"
         tools:ignore="HardcodedText,VisualLintTextFieldSize" />
 
-
     <TextView
         android:id="@+id/mealSuggestion"
         android:layout_width="wrap_content"
-        android:layout_height="73dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/timeInput"
-        android:layout_marginTop="77dp"
+        android:layout_marginTop="274dp"
         android:background="#8A8282"
         android:backgroundTint="#B1A5A5"
         android:padding="10dp"
@@ -38,13 +37,22 @@
         android:textStyle="bold"
         tools:ignore="HardcodedText" />
 
+    <ImageView
+        android:id="@+id/mealImage"
+        android:layout_width="300dp"
+        android:layout_height="275dp"
+        android:layout_marginTop="75dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="res/drawable"
+        android:visibility="gone" />
+
+
     <Button
         android:id="@+id/suggestButton"
         android:layout_width="241dp"
         android:layout_height="64dp"
         android:layout_below="@id/mealSuggestion"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="11dp"
         android:background="#00B8D4"
         android:backgroundTint="#3898A8"
         android:text="Get Meal Suggestion"
@@ -53,26 +61,16 @@
         android:textStyle="bold"
         tools:ignore="HardcodedText,TextContrastCheck" />
 
-
     <Button
         android:id="@+id/resetButton"
         android:layout_width="153dp"
         android:layout_height="64dp"
         android:layout_below="@id/suggestButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="49dp"
         android:text="Reset"
         android:textSize="20sp"
         android:textStyle="bold"
         tools:ignore="HardcodedText" />
 
-    <ImageView
-        android:id="@+id/mealImage"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="75dp"
-        android:scaleType="centerCrop"
-        android:contentDescription="res/drawable"
-        android:visibility="gone" />
 
 </RelativeLayout>

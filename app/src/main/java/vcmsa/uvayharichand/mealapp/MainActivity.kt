@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mealSuggestion: TextView
     private lateinit var suggestButton: Button
     private lateinit var resetButton: Button
-    private lateinit var mealImage: ImageView  // ImageView for meal images
+    private lateinit var mealImage: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,6 +60,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Function to return meal suggestion based on the time of day
+    // use of AI to generate the meal suggestion (chatgpt)
     private fun suggestMeal(timeOfDay: String): String? {
         return when (timeOfDay) {
             "morning" -> "Eggs, bacon and toast"
@@ -72,10 +73,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // Function to update the image based on the meal suggestion ( could not make the function work to display the images
+    // Function to update the image based on the meal suggestion
     private fun updateMealImage(meal: String) {
         val imageResId = when (meal) {
-            "Eggs and bacon" -> R.drawable.breakfast
+            "Eggs, bacon and toast" -> R.drawable.breakfast
             "Fruit salad" -> R.drawable.fruit
             "Sandwich of choice" -> R.drawable.sandwich
             "Chocolate, caramel, or vanilla cake" -> R.drawable.cake
